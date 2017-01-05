@@ -1,0 +1,21 @@
+html
+  head
+    link(rel="stylesheet" media="all" href="css/main.css")
+  body
+    script.
+      window.onload = function() {
+        var d = document.querySelector('.button');
+        d.addEventListener('click', function() {
+          var covers = document.querySelectorAll('.no-game-content');
+          covers.forEach(function(cover) {
+            cover.classList.toggle('on');
+          });
+        });
+      };
+    for val,index in ['藤田賢治　', '３D監督　薮田修平　', '　　編集　木村佳史子', '音響監督　明田川仁　']
+      .no-game-content
+        .left-brackets 「
+        .animation-cover
+          span.text #{val}
+        .right-brackets 」
+    .button on

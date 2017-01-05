@@ -1,0 +1,82 @@
+.no-game-content
+  display flex
+  justify-content center
+  align-items center
+  font-size 30px
+  color #fff
+  text-shadow 0 0 2.5px #fff, 0 0 5px #fff, 0 0 6px #fff, 0 0 5px #ff00de, 0 0 6px #ff00de, 0 0 8px #ff00de, 0 0 10px #ff00de
+
+  &:nth-of-type(2)
+    .animation-cover
+      transition-delay 50ms
+  &:nth-of-type(3)
+    .animation-cover
+      transition-delay 100ms
+  &:nth-of-type(4)
+    .animation-cover
+      transition-delay 150ms
+  &:nth-of-type(5)
+    .animation-cover
+      transition-delay 200ms
+
+  &.on
+    .left-brackets, .right-brackets
+      opacity 0
+
+      &::after
+        margin-right 70px
+      &::before
+        margin-left 70px
+
+    .animation-cover
+      max-width 400px
+      opacity 1
+
+      .text
+        filter blur(1px)
+        opacity 0
+
+ .animation-cover
+   padding 5px 0
+   max-width 0px
+   opacity 0
+   display inline-block
+   text-align center
+   overflow-x hidden
+   white-space nowrap
+   transition-property max-width, opacity
+   transition-duration 500ms
+   transition-timing-function cubic-bezier(0.175, 0.930, 0.295, 0.955)
+
+   .text
+     filter blur(0px)
+     opacity 1
+     transition-property opacity, filter
+     transition-timing-function linear
+     transition-duration 300ms
+     transition-delay 1s
+
+.left-brackets, .right-brackets
+   opacity 1
+   flex-shrink 1
+   display inline-block
+   transition-duration 1s
+   transition-delay 300ms]
+    transition-timing-function cubic-bezier(0.000, 0.985, 0.890, 0.555)
+  //  transition-timing-function cubic-bezier(0.175, 0.930, 0.295, 0.955)
+
+   &::before, &::after
+     transition-duration 1s
+     transition-timing-function cubic-bezier(0.010, 1.165, 0.530, 0.930)
+
+.left-brackets
+   &::after
+     content " "
+     margin-right 0px
+     transition-property margin-right
+
+.right-brackets
+   &::before
+     content " "
+     margin-left 0px
+     transition-property margin-left
