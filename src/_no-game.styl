@@ -46,7 +46,7 @@ h2
    padding 5px 0
    flex 0
    opacity 0
-   display inline-block
+   display flex
    text-align center
    overflow-x hidden
    white-space nowrap
@@ -55,12 +55,20 @@ h2
    transition-timing-function cubic-bezier(0.175, 0.930, 0.295, 0.955)
 
    .text
+     flex 1
      filter blur(0px)
      opacity 1
      transition-property opacity, filter
      transition-timing-function linear
      transition-duration 300ms
      transition-delay 1s
+
+     &.left
+       padding-right 20px
+       text-align right
+     &.right
+       padding-left 20px
+       text-align left
 
 .left-brackets, .right-brackets
    opacity 1

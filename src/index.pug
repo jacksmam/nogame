@@ -15,10 +15,11 @@ html
         });
       };
     h2 ノーゲーム・ノーライフのOP風アニメーション
-    for val,index in ['オープンニングテーマ　　「 This game 」','　　　　作詞　　深青結希', '　　　　作曲　　若林　充', '　　編曲　　eba', '　　　　　　歌　　鈴木このみ']
+    for val,index in [['オープンニングテーマ', '「 This game 」'],['作詞', '深青結希'],['作曲','若林　充'],['編曲','eba'],['歌','鈴木このみ']]
       .no-game-content
         .left-brackets 「
         .animation-cover
-          span.text #{val}
+          span.text.left #{val[0]}
+          span.text.right #{val[1]}
         .right-brackets 」
     .button OFF
