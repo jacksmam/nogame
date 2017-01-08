@@ -10,13 +10,15 @@ html
           covers.forEach(function(cover) {
             cover.classList.toggle('on');
           });
+          d.textContent  = d.textContent == 'ON' ? 'OFF' : "ON";
+          d.classList.toggle('on');
         });
       };
-    h2 ノーゲーム・ノーライフのOPのヒトの表示風アニメーション
-    for val,index in ['テスト　', 'ほげほげ', '総監督　わっしょい鈴木', '(*^_^*)(*^_^*)(*^_^*)(*^_^*)']
+    h2 ノーゲーム・ノーライフのOP風アニメーション
+    for val,index in ['オープンニングテーマ　　「 This game 」','　　　　作詞　　深青結希', '　　　　作曲　　若林　充', '　　編曲　　eba', '　　　　　　歌　　鈴木このみ']
       .no-game-content
         .left-brackets 「
         .animation-cover
           span.text #{val}
         .right-brackets 」
-    .button on
+    .button OFF
